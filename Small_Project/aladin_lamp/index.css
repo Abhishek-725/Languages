@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Aligns items horizontally (image in this case) */
+    align-items: center; /* Aligns items vertically (image in this case) */
+    background-color: rgb(29, 29, 29);
+  }
+  
+  .lamp {
+    width: 100%;
+    height: fit-content;
+    background: url('./lamp.jpg') no-repeat;
+    background-size: contain;
+  }
+  
+  .smoke {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: rgba(97, 95, 95, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .smoke {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Adjust the width of the smoke effect */
+    height: 100px; /* Adjust the height of the smoke effect */
+    animation: smokeAnimation 3s infinite ease-in-out; /* Adjust animation duration and timing */
+  }
+  
+  @keyframes smokeAnimation {
+    0% { opacity: 0; transform: translateY(0) scale(0.5); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-50px) scale(1.5); }
+  }
+  
