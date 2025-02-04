@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {buyCake} from '../../redux/index';
 
 function CakeContainer(props) {
-  console.log(props);  
+  // console.log(props);  
   return (
     <>
       <h2>Cake Count {props.numberOfCakes}</h2>
@@ -14,7 +14,7 @@ function CakeContainer(props) {
 
 const mapStateToprops = state => {
   return {
-    numberOfCakes : state.numberOfCakes
+    numberOfCakes : state.cake.numberOfCakes
   }
 }
 
